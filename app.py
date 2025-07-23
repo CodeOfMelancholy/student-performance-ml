@@ -35,7 +35,7 @@ st.markdown("##### A Mini ML Research Project")
 st.write("Now you can predict your exam performance based on your study habits, sleep, past scores, and attendance.")
 
 # ---------------------------
-# 1. Generate Synthetic Dataset
+#  Generation of Synthetic Dataset
 # ---------------------------
 @st.cache_data
 def generate_data():
@@ -60,7 +60,7 @@ def generate_data():
 data = generate_data()
 
 # ---------------------------
-# 2. EDA - Correlation Heatmap
+#  EDA - Correlation Heatmap
 # ---------------------------
 st.subheader("📊 Exploratory Data Analysis")
 
@@ -71,7 +71,7 @@ with st.expander("Show Correlation Heatmap"):
     st.pyplot(fig)
 
 # ---------------------------
-# 3. Train Models & Compare
+#  Training Models & Comparing
 # ---------------------------
 st.subheader("🤖 Model Training & Comparison")
 
@@ -111,7 +111,7 @@ sns.barplot(data=feat_imp, x='Importance', y='Feature', palette="viridis", ax=ax
 st.pyplot(fig2)
 
 # ---------------------------
-# 4. Interactive Prediction
+#  Interactive Prediction
 # ---------------------------
 st.subheader("🎯 Predict Your Score")
 
